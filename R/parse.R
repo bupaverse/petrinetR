@@ -1,0 +1,25 @@
+
+#' @title Parse
+#'
+#' @description Parses a sequence of transitions. If possible returns the Petri Net with the updated marking. Otherwise returns FALSE
+#'
+#' @param PN A Petri Net
+#' @param trace A sequence of transitions, stored in a vector.
+#'
+#' @export parse
+
+
+
+
+
+parse <- function(PN, trace) {
+	for(i in 1:length(trace)) {
+		if(trace[i] %in% enabled(PN)$id){
+			PN <- execute(PN, trace[i])
+		}
+		else{
+			return(FALSE)
+		}
+	}
+	return(PN)
+}
