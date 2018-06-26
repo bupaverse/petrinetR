@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1528138464990.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "BE93EB97",
+    "lastKnownWriteTime" : 1528138495,
+    "last_content_update" : 1528138495060,
+    "path" : "~/UH - Local/R workspace/petrinetR/R/tree_to_PN.R",
+    "project_path" : "R/tree_to_PN.R",
+    "properties" : {
+        "cursorPosition" : "6,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

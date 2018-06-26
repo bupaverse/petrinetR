@@ -13,6 +13,11 @@
 
 
 parse <- function(PN, trace) {
+
+
+	if(length(trace) == 0)
+		return(PN)
+
 	for(i in 1:length(trace)) {
 		if(trace[i] %in% enabled(PN)$id){
 			PN <- execute(PN, trace[i])

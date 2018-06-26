@@ -12,4 +12,3 @@ places(PN)
 \description{
 Extracts the places from a Petri Net
 }
-

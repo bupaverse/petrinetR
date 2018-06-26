@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "\n#' @title Part of\n#'\n#' @description Check if a node is part of a petri net\n#'\n#' @param node A node\n#' @param PN A Petri Net\n#'\n#' @export part_of\n\n\npart_of <- function(node, PN) {\n\tif(node %in% transitions(PN)$id)\n\t\treturn(T)\n\telse if(node %in% places(PN)$id)\n\t\treturn(T)\n\telse\n\t\treturn(F)\n}\n\n",
+    "created" : 1475565272572.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1959807411",
+    "id" : "F14A78FD",
+    "lastKnownWriteTime" : 1475565160,
+    "last_content_update" : 1475565160,
+    "path" : "C:/Users/lucp8407/Google Drive/My UH/R workspace/petrinetR/R/part_of.R",
+    "project_path" : "R/part_of.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 13,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

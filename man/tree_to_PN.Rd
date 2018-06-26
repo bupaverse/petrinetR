@@ -8,10 +8,7 @@ tree_to_PN(tree)
 }
 \arguments{
 \item{tree}{The process tree to be converted}
-
-\item{name}{A name, which will be used to indicated the start and end transitions of the petri net.}
 }
 \description{
 Create of petri net from a process tree.
 }
-

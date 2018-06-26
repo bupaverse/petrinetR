@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "\n#' @title Preset\n#'\n#' @description Get the preset of a transition or place in a Petri Net\n#'\n#' @param PN A Petri Net\n#' @param node A place or transition in the petri net\n#'\n#' @export pre_set\n\n\npre_set <- function(PN, node) {\n\t(PN$flows %>% filter(to == node))$from %>% return()\n}\n",
+    "created" : 1475563717268.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "475120096",
+    "id" : "EAFCF076",
+    "lastKnownWriteTime" : 1471506286,
+    "last_content_update" : 1471506286,
+    "path" : "C:/Users/lucp8407/Google Drive/My UH/R workspace/petrinetR/R/preset.R",
+    "project_path" : "R/preset.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

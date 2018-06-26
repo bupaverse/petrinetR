@@ -14,4 +14,3 @@ is_place(place, PN)
 \description{
 Check if a place is part of a petri net
 }
-

@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1528137580638.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "1868598D",
+    "lastKnownWriteTime" : 1528138063,
+    "last_content_update" : 1528138063227,
+    "path" : "~/UH - Local/R workspace/petrinetR/R/print.petrinet.R",
+    "project_path" : "R/print.petrinet.R",
+    "properties" : {
+        "cursorPosition" : "6,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

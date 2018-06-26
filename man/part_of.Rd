@@ -14,4 +14,3 @@ part_of(node, PN)
 \description{
 Check if a node is part of a petri net
 }
-

@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#' @title Execute\n#'\n#' @description {Executes (fire) an enabled transition and returns the Petri Net with the New marking. If the transition is enabled\n#'  via the firing of silent transition (i.e. starting with \"inv_\" of \"tau\"), it will fire these first. If the transition is not\n#'  enabled, it will return FALSE.}\n#'\n#' @param PN A Petri Net\n#' @param transition The transition to be fired\n#'\n#' @export execute\n\n\nexecute <- function(PN, transition){\n\n\tif(enabled_transition(PN, transition)){\n\t\tPN$marking <- union(setdiff(PN$marking, pre_set(PN, transition)), post_set(PN, transition))\n\t\treturn(PN)\n\t}\n\telse if(transition %in% enabled(PN)$id) {\n\t\tPN %>% execute(enabled(PN)$by[transition == enabled(PN)$id][1] ) %>% execute(transition) %>% return()\n\t}\n\telse\n\t\treturn(FALSE)\n}\n",
+    "created" : 1475564483356.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "799922739",
+    "id" : "4DCE04B",
+    "lastKnownWriteTime" : 1475570395,
+    "last_content_update" : 1475570396022,
+    "path" : "C:/Users/lucp8407/Google Drive/My UH/R workspace/petrinetR/R/execute.R",
+    "project_path" : "R/execute.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -12,4 +12,3 @@ enabled(PN)
 \description{
 List the enabled transitions in a marked Petri Net. Silent transitions, i.e. starting with "inv_" or "tau" are assumed to be able to fire silently, thereby possible enabling other transitions.
 }
-

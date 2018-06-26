@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1530047842169.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1698338671",
+    "id" : "7BFC74B0",
+    "lastKnownWriteTime" : 1530048047,
+    "last_content_update" : 1530048047066,
+    "path" : "~/UH - Local/R workspace/petrinetR/README.Rmd",
+    "project_path" : "README.Rmd",
+    "properties" : {
+        "cursorPosition" : "14,115",
+        "scrollLine" : "10"
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

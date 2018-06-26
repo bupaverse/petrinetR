@@ -14,4 +14,3 @@ parsel(PN, trace)
 \description{
 Tests whether a sequence of transitions can be fired by a Petri Net. If so returns TRUE, otherwise FALSE.
 }
-

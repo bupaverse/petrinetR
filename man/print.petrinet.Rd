@@ -4,7 +4,7 @@
 \alias{print.petrinet}
 \title{Generic print function for petrinet}
 \usage{
-\method{print}{petrinet}(x)
+\method{print}{petrinet}(x, ...)
 }
 \arguments{
 \item{x}{petrinet object}
@@ -14,4 +14,3 @@
 \description{
 Generic print function for petrinet
 }
-

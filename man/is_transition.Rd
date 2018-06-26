@@ -14,4 +14,3 @@ is_transition(transition, PN)
 \description{
 Check if a transition is part of a petri net
 }
-

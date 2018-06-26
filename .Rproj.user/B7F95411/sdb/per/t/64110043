@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "\n\n\n#' @title As graph\n#'\n#' @description Function\n#'\n#' @param PN A petrin et\n#'\n#' @export as.graph\n\nas.graph <- function(PN) {\n\n\n\n\tnodes <- bind_rows(\n\t\tPN$places %>% mutate(shape = \"circle\"),\n\t\tPN$transitions %>% mutate(shape = \"square\")\n\t) %>% suppressWarnings() %>%\n\t\tmutate(nodes = id,\n\t\t\t   label = ifelse(shape == \"circle\", \"\",id),\n\t\t\t   fixedsize = T)\n\n\tedges <- PN$flows %>%\n\t\tmutate(arrows = \"to\")\n\n\tcreate_graph(nodes, edges)\n\n}\n",
+    "created" : 1475502811504.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1700585658",
+    "id" : "64110043",
+    "lastKnownWriteTime" : 1475505004,
+    "last_content_update" : 1475505004610,
+    "path" : "C:/Users/lucp8407/Google Drive/My UH/R workspace/petrinetR/R/as.graph.R",
+    "project_path" : "R/as.graph.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

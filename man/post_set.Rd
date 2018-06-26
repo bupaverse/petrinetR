@@ -14,4 +14,3 @@ post_set(PN, node)
 \description{
 Get the postset of a transition or place in a Petri Net
 }
-

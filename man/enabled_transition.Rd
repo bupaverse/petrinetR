@@ -14,4 +14,3 @@ enabled_transition(PN, transition)
 \description{
 Check if a transition is currently enabled
 }
-

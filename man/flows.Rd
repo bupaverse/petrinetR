@@ -12,4 +12,3 @@ flows(PN)
 \description{
 Extracts the flows from a Petri Net
 }
-

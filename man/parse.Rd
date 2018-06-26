@@ -14,4 +14,3 @@ parse(PN, trace)
 \description{
 Parses a sequence of transitions. If possible returns the Petri Net with the updated marking. Otherwise returns FALSE
 }
-

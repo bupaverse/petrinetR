@@ -12,4 +12,3 @@ visNetwork_from_PN(PN)
 \description{
 Visualize a Petri Net with an interactive network
 }
-

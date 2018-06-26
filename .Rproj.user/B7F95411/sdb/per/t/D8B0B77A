@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "\n#' @title Enabled Transition\n#'\n#' @description Check if a transition is currently enabled\n#'\n#' @param PN A Petri Net\n#' @param transition A Transition\n#'\n#' @export enabled_transition\n\n\n\n\nenabled_transition <- function(PN,transition) {\n\tif(transition %>% is_transition(PN))\n\t\treturn(all(pre_set(PN, transition) %in% PN$marking))\n\telse\n\t\treturn(F)\n}\n",
+    "created" : 1475564538970.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1391316392",
+    "id" : "D8B0B77A",
+    "lastKnownWriteTime" : 1475565446,
+    "last_content_update" : 1475565446414,
+    "path" : "C:/Users/lucp8407/Google Drive/My UH/R workspace/petrinetR/R/enabled_transition.R",
+    "project_path" : "R/enabled_transition.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 10,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -16,4 +16,3 @@ execute(PN, transition)
  via the firing of silent transition (i.e. starting with "inv_" of "tau"), it will fire these first. If the transition is not
  enabled, it will return FALSE.}
 }
-

@@ -12,4 +12,3 @@ transitions(PN)
 \description{
 Extracts the transitions from a Petri Net
 }
-

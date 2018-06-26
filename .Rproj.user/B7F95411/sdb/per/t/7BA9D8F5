@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "\n#' @title Enabled transitions\n#'\n#' @description List the enabled transitions in a marked Petri Net. Silent transitions, i.e. starting with \"inv_\" or \"tau\" are assumed to be able to fire silently, thereby possible enabling other transitions.\n#'\n#' @param PN A Petri Net\n#'\n#' @export enabled\n\n\nenabled <- function(PN) {\n\n\tPN %>%\n\t\ttransitions %>%\n\t\tmutate(enabled = (id %>% sapply(enabled_transition, PN = PN))) %>%\n\t\tfilter(enabled == TRUE) -> output\n\n\toutput %>%\n\t\tfilter(grepl(\"inv_\", id) | grepl(\"tau\", id)) -> enabled_inv\n\n\tif(nrow(enabled_inv) > 0) {\n\t\tfor(i in 1:nrow(enabled_inv)){\n\t\t\texecute(PN, enabled_inv$id[i]) %>%\n\t\t\t\tenabled %>%\n\t\t\t\tmutate(by = enabled_inv$id[i]) %>%\n\t\t\t\tbind_rows(output, .) -> output\n\t\t}\n\t}\n\n\toutput %>% unique %>% return()\n}\n",
+    "created" : 1475510452986.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2329400182",
+    "id" : "7BA9D8F5",
+    "lastKnownWriteTime" : 1475567206,
+    "last_content_update" : 1475567206709,
+    "path" : "C:/Users/lucp8407/Google Drive/My UH/R workspace/petrinetR/R/enabled.R",
+    "project_path" : "R/enabled.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -14,4 +14,3 @@ pre_set(PN, node)
 \description{
 Get the preset of a transition or place in a Petri Net
 }
-

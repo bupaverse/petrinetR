@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#' @title VisNetwork from PN\n#' @description Visualize a Petri Net with an interactive network\n#'\n#' @param PN Petri Net to visualize\n#'\n#' @export visNetwork_from_PN\n\n\nvisNetwork_from_PN <- function(PN) {\n\tnodes <- bind_rows(\n\t\tPN$places %>% mutate(shape = \"dot\"),\n\t\tPN$transitions %>% mutate(shape = \"square\")\n\t) %>% suppressWarnings()\n\tedges <- PN$flows %>%\n\t\tmutate(arrows = \"to\")\n\n\tif(!is.null(marking(PN))){\n\t\tnodes %>% mutate(color = ifelse(id %in% marking(PN), \"darkred\", NA)) -> nodes\n\t}\n\tvisNetwork(nodes, edges) %>%\n\t\tvisOptions(highlightNearest = TRUE, nodesIdSelection = TRUE) %>%\n\t\treturn()\n}\n",
+    "created" : 1475484091153.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2035713310",
+    "id" : "B0FEE6E4",
+    "lastKnownWriteTime" : 1475496673,
+    "last_content_update" : 1475496673526,
+    "path" : "C:/Users/lucp8407/Google Drive/My UH/R workspace/petrinetR/R/visNetwork_from_PN.R",
+    "project_path" : "R/visNetwork_from_PN.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

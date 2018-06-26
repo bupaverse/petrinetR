@@ -26,4 +26,3 @@ create_PN("place_1",
 			marking = "place_1")
 
 }
-

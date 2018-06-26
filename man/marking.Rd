@@ -12,4 +12,3 @@ marking(PN)
 \description{
 Get the current marking of a Petri Net
 }
-
