@@ -5,14 +5,14 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "3001829982",
+    "hash" : "2386851459",
     "id" : "BE003284",
-    "lastKnownWriteTime" : 1530048133,
-    "last_content_update" : 1530048133213,
+    "lastKnownWriteTime" : 1530048450,
+    "last_content_update" : 1530048450089,
     "path" : "~/UH - Local/R workspace/petrinetR/DESCRIPTION",
     "project_path" : "DESCRIPTION",
     "properties" : {
-        "cursorPosition" : "3,14",
+        "cursorPosition" : "4,16",
         "scrollLine" : "0"
     },
     "relative_order" : 8,
