@@ -28,4 +28,4 @@ You can install petrinetR from github with:
 devtools::install_github("gertjanssenswillen/petrinetR")
 ```
 
-```
+
