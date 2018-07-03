@@ -14,12 +14,14 @@ render_PN <- function(PN) {
 
 
 	nodes <- nodes(PN) %>%
-		mutate(node_id = 1:n())
+		mutate(node_id = 1:n()) %>%
+		mutate(color = ifelse(id %in% marking(PN), "red","blue"))
 
 	flows <- flows(PN)
 
 	create_node_df(n = n_nodes(PN),
 				   label = nodes$id,
+				   color = nodes$color,
 				   shape = ifelse(nodes$type == "place", "circle","rectangle")) -> node_df
 
 	flows %>%

@@ -2,7 +2,7 @@ Package: petrinetR
 Type: Package
 Title: Building, Visualizing, Exporting and Replaying Petri Nets
 Version: 0.2.0
-Date: 2018-06-26
+Date: 2018-07-03
 Authors@R: c(person("Gert","Janssenswillen",email = "gert.janssenswillen@uhasselt.be", role = c("aut","cre")))
 Description: Functions for the construction of Petri Nets. Petri Nets can be replayed by firing enabled transitions.
      Silent transitions will be hidden by the execution handler. Also includes functionalities for the visualization of Petri Nets and

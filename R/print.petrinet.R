@@ -6,7 +6,9 @@
 #' @export
 
 print.petrinet <- function(x, ...) {
-	print(marking(x))
+	cat("Marking: ",marking(x), "\n")
+	cat("Enabled transition\n")
 	print(enabled(x))
+	render_PN(x)
 
 }
