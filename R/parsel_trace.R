@@ -5,11 +5,11 @@
 #' @param PN A Petri Net
 #' @param trace A sequence of transitions, stored in a vector.
 #'
-#' @export parsel
+#' @export parsel_trace
 
 
 
-parsel <- function(PN, trace) {
+parsel_trace <- function(PN, trace) {
 	for(i in 1:length(trace)) {
 		if(trace[i] %in% enabled(PN)$id){
 			PN <- execute(PN, trace[i])

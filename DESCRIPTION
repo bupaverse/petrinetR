@@ -13,6 +13,6 @@ Depends:
 LazyData: true
 Imports:
     dplyr, visNetwork, DiagrammeR, xml2, purrr
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
 URL: https://www.bupar.net
 BugReports: https://github.com/gertjanssenswillen/petrinetR/issues
