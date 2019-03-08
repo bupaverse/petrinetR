@@ -6,13 +6,13 @@
 #' @param PN A Petri Net
 #' @param trace A sequence of transitions, stored in a vector.
 #'
-#' @export parse
+#' @export parse_trace
 
 
 
 
 
-parse <- function(PN, trace) {
+parse_trace <- function(PN, trace) {
 
 
 	if(length(trace) == 0)
