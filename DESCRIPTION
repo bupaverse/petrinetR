@@ -1,8 +1,8 @@
 Package: petrinetR
 Type: Package
 Title: Building, Visualizing, Exporting and Replaying Petri Nets
-Version: 0.2.0
-Date: 2018-07-03
+Version: 0.2.1.9000
+Date: 2019-03-08
 Authors@R: c(person("Gert","Janssenswillen",email = "gert.janssenswillen@uhasselt.be", role = c("aut","cre")))
 Description: Functions for the construction of Petri Nets. Petri Nets can be replayed by firing enabled transitions.
      Silent transitions will be hidden by the execution handler. Also includes functionalities for the visualization of Petri Nets and
@@ -12,7 +12,11 @@ Depends:
 	R(>= 3.0.0)
 LazyData: true
 Imports:
-    dplyr, visNetwork, DiagrammeR, xml2, purrr
+    dplyr, 
+    visNetwork, 
+    DiagrammeR, 
+    xml2, 
+    purrr
 RoxygenNote: 6.1.1
-URL: https://www.bupar.net
-BugReports: https://github.com/gertjanssenswillen/petrinetR/issues
+URL: https://www.bupar.net, https://github.com/bupaverse/petrinetR
+BugReports: https://github.com/bupaverse/petrinetR/issues
