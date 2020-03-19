@@ -3,7 +3,6 @@
 \docType{package}
 \name{petrinetR}
 \alias{petrinetR}
-\alias{petrinetR-package}
 \title{petrinetR - Building, visualizing, exporting and replaying Petri Nets}
 \description{
 Functions for the construction of Petri Nets. Petri Nets can be replayed by firing enabled transitions.
