@@ -11,11 +11,19 @@
 
 render_PN <- function(PN) {
 	node_id <- NULL
-
+	label <- NULL
 
 	nodes <- nodes(PN) %>%
 		mutate(node_id = 1:n()) %>%
-		mutate(color = ifelse(id %in% marking(PN), "red","blue"))
+		mutate(color = if_else(id %in% marking(PN), "red","blue"))
+
+	if ("label" %in% names(nodes)) {
+		nodes <- nodes %>%
+			mutate(label = if_else(is.na(label), id, label))
+	} else {
+		nodes <- nodes %>%
+			mutate(label = id)
+	}
 
 	flows <- flows(PN)
 

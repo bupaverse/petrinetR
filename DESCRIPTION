@@ -17,6 +17,6 @@ Imports:
     DiagrammeR, 
     xml2, 
     purrr
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.0
 URL: https://www.bupar.net, https://github.com/bupaverse/petrinetR
 BugReports: https://github.com/bupaverse/petrinetR/issues
