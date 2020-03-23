@@ -5,53 +5,40 @@
 #' @description Function
 #'
 #' @param file Path to .pnml file
+#' @param initialize_marking Set marking of PN to initial marking
 #' @import xml2
 #' @import purrr
 #' @export
 #'
 #'
-read_PN <- function(file) {
+read_PN <- function(file, initialize_marking = TRUE) {
 
-node <- NULL
-children <- NULL
-initial_marking <- NULL
-node_name <- NULL
-name <- NULL
+	read_xml(file) %>%
+		xml_children() %>%
+		xml_children() -> t
 
-read_xml(file) %>%
-	xml_children() %>%
-	xml_children() -> t
+	unlist(map(t, xml_name)) -> names
+	map(t, xml_child, "name") -> child_names
+	(map(map(map(map(t, xml_child, "initialMarking"), xml_child, "text"), xml_contents), length ) == 1) -> initial_marking
+	child_names %>% map(xml_child, "text") %>% map_chr(xml_text) -> node_names
 
-data_frame(node = t) %>%
-	mutate(children = map(node, xml_child, "initialMarking")) %>%
-	mutate(initial_marking = map(map(children, xml_child, "text"), xml_contents)) %>%
-	mutate(initial_marking = map(initial_marking, length) == 1) %>%
-	mutate(name = xml_name(node)) %>%
-	mutate(children = map(node, xml_child, "name")) %>%
-	mutate(node_name = map_chr(map(children, xml_child, "text"), xml_text))%>%
-	mutate(id = xml_attr(node, "id")) %>%
-	mutate(source = xml_attr(node, "source"),
-		   target = xml_attr(node, "target")) %>%
-	select(-node, -children) %>%
-	mutate(node_name = ifelse(node_name == "", id, node_name)) -> data
+	xml_attr(t, "id") -> id
+	xml_attr(t, "source") -> source
+	xml_attr(t, "target") -> target
 
-data %>%
-	filter(name == "place") -> places
-data %>%
-	filter(name == "transition") -> transitions
+	tibble(type = names, id, label = node_names, source, target, initial_marking) -> data
 
-nodes <- bind_rows(places, transitions) %>% select(id,node_name)
+	data %>% filter(type == "place") %>% select(id, label, initial_marking) -> places
+	data %>% filter(type == "transition") %>% select(id, label) -> transitions
 
-data %>%
-	filter(name == "arc") %>%
-	select(-node_name) %>%
-	left_join(nodes, by = c("source"="id")) %>%
-	rename(from = node_name) %>%
-	left_join(nodes, by = c("target" = "id")) %>%
-	rename(to = node_name) -> flows
+	nodes <- bind_rows(places, transitions) %>% select(id, label)
+	data %>% filter(type == "arc") %>%
+		select(-label, -type, -id, -initial_marking) %>%
+		rename(from = source, to = target) -> flows
 
-create_PN(places = places$node_name,
-		  transitions = transitions$node_name,
-		  flows = flows,
-		  marking = places %>% filter(initial_marking) %>% pull(id))
+	create_PN(places = places,
+			  transitions = transitions,
+			  flows = flows,
+			  initial_marking = places %>% filter(initial_marking) %>% pull(id),
+			  marking = places %>% filter(initial_marking) %>% pull(id))
 }

@@ -20,7 +20,7 @@ render_PN <- function(PN) {
 	flows <- flows(PN)
 
 	create_node_df(n = n_nodes(PN),
-				   label = nodes$id,
+				   label = nodes$label,
 				   color = nodes$color,
 				   shape = ifelse(nodes$type == "place", "circle","rectangle")) -> node_df
 
