@@ -9,7 +9,7 @@ create_PN(places, transitions, flows, marking)
 \arguments{
 \item{places}{A vector of unique places.}
 
-\item{transitions}{A vector of unique transitions.}
+\item{transitions}{A data.frame of unique transitions, with columns named "id" and "label"}
 
 \item{flows}{A data.frame of flows, with columns named "from" and "to".}
 
