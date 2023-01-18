@@ -25,4 +25,5 @@ create_PN <- function(places,transitions,flows) {
 	class(PN) <- "petrinet"
 
 	return(PN)
+
 }

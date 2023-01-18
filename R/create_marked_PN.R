@@ -15,12 +15,12 @@
 
 create_marked_PN <- function(x) {
 	marked_pn <- x[[1]]
-	source <- x[[2]]
-	sink <- x[[3]]
+	initial_marking <- x[[2]]
+	final_marking <- x[[3]]
 
-	PN <- list(marked_pn = marked_pn, source = source, sink = sink)
+	marked_PN <- list(marked_pn = marked_pn, initial_marking = initial_marking, final_marking = final_marking)
 
-	class(PN) <- "marked_petrinet"
+	class(marked_PN) <- "marked_petrinet"
 
-	return(PN)
+	return(marked_PN)
 }

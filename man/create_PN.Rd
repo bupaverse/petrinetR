@@ -4,7 +4,7 @@
 \alias{create_PN}
 \title{Create Petri Net}
 \usage{
-create_PN(places, transitions, flows, marking)
+create_PN(places, transitions, flows)
 }
 \arguments{
 \item{places}{A vector of unique places.}
