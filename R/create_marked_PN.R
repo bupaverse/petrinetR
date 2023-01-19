@@ -18,7 +18,7 @@ create_marked_PN <- function(x) {
 	initial_marking <- x[[2]]
 	final_marking <- x[[3]]
 
-	marked_PN <- list(marked_pn = marked_pn, initial_marking = initial_marking, final_marking = final_marking)
+	marked_PN <- list(petrinet = marked_pn, initial_marking = initial_marking, final_marking = final_marking)
 
 	class(marked_PN) <- "marked_petrinet"
 
