@@ -34,15 +34,7 @@ n_nodes <- function(PN) {
 	n_places(PN) + n_transitions(PN)
 }
 #' @rdname Utils
-#' @export
 
-nodes <- function(PN) {
-	places <- places(PN) %>% mutate(type = "place")
-	transitions <- transitions(PN) %>% mutate(type = "transition")
-
-	places %>%
-		bind_rows(transitions)
-}
 #' @rdname Utils
 #' @export
 
