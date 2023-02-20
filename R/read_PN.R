@@ -76,7 +76,7 @@ if (add_final_marking) {
 		filter(name == "arc") %>%
 		pull(source)
 
-	final_marking <- setdiff(place_ids, tmp_arc_source)
+	final_marking <- setdiff(place_ids, arc_sources)
 }
 
 
