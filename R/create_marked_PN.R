@@ -13,14 +13,14 @@
 #'
 #' @export create_marked_PN
 
-create_marked_PN <- function(x) {
-	marked_pn <- x[[1]]
-	initial_marking <- x[[2]]
-	final_marking <- x[[3]]
+create_marked_PN <- function(PN, initial_marking, final_marking) {
+	petrinet <- PN
+	initial_marking <- initial_marking
+	final_marking <- final_marking
 
-	marked_PN <- list(petrinet = marked_pn, initial_marking = initial_marking, final_marking = final_marking)
+	marked_PN <- list(petrinet = petrinet, initial_marking = initial_marking, final_marking = final_marking)
 
-	class(marked_PN) <- "marked_petrinet"
+	class(marked_PN) <- c("marked_petrinet", "petrinet", "list")
 
 	return(marked_PN)
 }

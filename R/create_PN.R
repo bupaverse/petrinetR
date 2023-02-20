@@ -5,7 +5,6 @@
 #' @param places A vector of unique places.
 #' @param transitions A data.frame of unique transitions, with columns named "id" and "label"
 #' @param flows A data.frame of flows, with columns named "from" and "to".
-#' @param marking The names of the places to be marked.
 #'
 #' @examples
 #'
@@ -22,7 +21,7 @@ create_PN <- function(places,transitions,flows) {
 	PN$transitions <- transitions
 	PN$flows <- flows
 
-	class(PN) <- "petrinet"
+	class(PN) <- c("petrinet", "list")
 
 	return(PN)
 

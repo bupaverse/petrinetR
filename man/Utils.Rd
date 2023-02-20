@@ -5,7 +5,6 @@
 \alias{n_transitions}
 \alias{n_flows}
 \alias{n_nodes}
-\alias{nodes}
 \alias{rename_transitions}
 \alias{rename_places}
 \alias{add_places}
@@ -20,8 +19,6 @@ n_transitions(PN)
 n_flows(PN)
 
 n_nodes(PN)
-
-nodes(PN)
 
 rename_transitions(PN, .f, ...)
 

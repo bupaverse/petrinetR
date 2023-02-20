@@ -12,8 +12,6 @@ create_PN(places, transitions, flows)
 \item{transitions}{A data.frame of unique transitions, with columns named "id" and "label"}
 
 \item{flows}{A data.frame of flows, with columns named "from" and "to".}
-
-\item{marking}{The names of the places to be marked.}
 }
 \description{
 Function to create a petri net by specificing a set of places, transitions, flows and a marking.

@@ -10,6 +10,10 @@
 
 enabled <- function(PN) {
 
+	lifecycle::deprecate_warn(
+		when = "0.3.0",
+		what = "enabled()")
+
 	PN %>%
 		transitions %>%
 		mutate(enabled = (id %>% sapply(enabled_transition, PN = PN))) %>%

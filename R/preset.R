@@ -8,7 +8,10 @@
 #'
 #' @export pre_set
 
-
 pre_set <- function(PN, node) {
-	(PN$flows %>% filter(to == node))$from %>% return()
+	UseMethod("pre_set")
+}
+
+pre_set.petrinet <- function(PN, node) {
+	(flows(PN) %>% filter(to == node))$from %>% return()
 }

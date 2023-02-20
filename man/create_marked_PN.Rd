@@ -4,7 +4,7 @@
 \alias{create_marked_PN}
 \title{Create marked Petri Net}
 \usage{
-create_marked_PN(x)
+create_marked_PN(PN, initial_marking, final_marking)
 }
 \arguments{
 \item{x}{a model (`list` object) returned by [pm4py_inductive()].}
