@@ -14,7 +14,7 @@ execute <- function(PN, transition){
 
 	lifecycle::deprecate_warn(
 		when = "0.3.0",
-		what = "enabled()")
+		what = "execute()")
 
 	if(enabled_transition(PN, transition)){
 		PN$marking <- union(setdiff(PN$marking, pre_set(PN, transition)), post_set(PN, transition))

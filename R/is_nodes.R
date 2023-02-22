@@ -8,16 +8,13 @@
 #'
 #' @export is_nodes
 
-is_nodes <- function(node, PN) {
-	UseMethod("is_nodes")
+is_node <- function(node, PN) {
+	UseMethod("is_node")
 }
 
-is_nodes.petrinet <- function(node, PN) {
+is_node.petrinet <- function(node, PN) {
 
-	lifecycle::deprecate_warn(
-		when = "0.3.0",
-		what = "enabled()",
-		with = "is_nodes()")
+
 
 	if(node %in% transitions(PN)$id)
 		return(T)
