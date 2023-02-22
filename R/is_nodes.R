@@ -1,20 +1,20 @@
 
-#' @title Part of
+#' @title Is node
 #'
 #' @description Check if a node is part of a petri net
 #'
 #' @param node A node
 #' @param PN A Petri Net
 #'
-#' @export part_of
+#' @export is_nodes
+
+is_node <- function(node, PN) {
+	UseMethod("is_node")
+}
+
+is_node.petrinet <- function(node, PN) {
 
 
-part_of <- function(node, PN) {
-
-	lifecycle::deprecate_warn(
-		when = "0.3.0",
-		what = "part_of()",
-		with = "is_nodes()")
 
 	if(node %in% transitions(PN)$id)
 		return(T)

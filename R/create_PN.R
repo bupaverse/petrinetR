@@ -18,6 +18,13 @@
 #'
 #' @export create_PN
 
+<<<<<<< HEAD
+create_PN <- function(places,transitions,flows) {
+	PN <- list()
+	PN$places <- data.frame(id = places , stringsAsFactors = F)
+	PN$transitions <- transitions
+	PN$flows <- flows
+=======
 create_PN <- function(places,transitions,flows, marking = NULL, initial_marking = NULL, final_marking = NULL) {
 	PN <- list()
 	PN$places <- places
@@ -26,8 +33,10 @@ create_PN <- function(places,transitions,flows, marking = NULL, initial_marking 
 	PN$marking <- marking
 	PN$initial_marking <- initial_marking
 	PN$final_marking <- final_marking
+>>>>>>> fd3bd1e4c167bd5d7a85679b54dc1de19993651a
 
-	class(PN) <- "petrinet"
+	class(PN) <- c("petrinet", "list")
 
 	return(PN)
+
 }

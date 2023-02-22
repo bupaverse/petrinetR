@@ -11,6 +11,11 @@
 
 
 tree_to_PN <- function(tree) {
+
+	lifecycle::deprecate_warn(
+		when = "0.3.0",
+		what = "tree_to_PN()")
+
 	if(is.null(tree$children)) {
 		return(sequence_to_PN(tree$name, tree$name))
 	}

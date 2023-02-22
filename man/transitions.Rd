@@ -2,9 +2,15 @@
 % Please edit documentation in R/transitions.R
 \name{transitions}
 \alias{transitions}
+\alias{transitions.petrinet}
+\alias{transitions.marked_petrinet}
 \title{Transitions}
 \usage{
 transitions(PN)
+
+\method{transitions}{petrinet}(PN)
+
+\method{transitions}{marked_petrinet}(PN)
 }
 \arguments{
 \item{PN}{A Petri Net}
@@ -12,3 +18,10 @@ transitions(PN)
 \description{
 Extracts the transitions from a Petri Net
 }
+\section{Methods (by class)}{
+\itemize{
+\item \code{transitions(petrinet)}: Transitions of petrinet
+
+\item \code{transitions(marked_petrinet)}: Transitions of marked petrinet
+
+}}

@@ -9,5 +9,9 @@
 #' @export post_set
 
 post_set <- function(PN, node) {
-	(PN$flows %>% filter(from == node))$to %>% return()
+	UseMethod("post_set")
+}
+
+post_set.petrinet <- function(PN, node) {
+	(flows(PN) %>% filter(from == node))$to %>% return()
 }

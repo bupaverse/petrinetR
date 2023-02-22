@@ -2,9 +2,15 @@
 % Please edit documentation in R/flows.R
 \name{flows}
 \alias{flows}
+\alias{flows.petrinet}
+\alias{flows.marked_petrinet}
 \title{Flows}
 \usage{
 flows(PN)
+
+\method{flows}{petrinet}(PN)
+
+\method{flows}{marked_petrinet}(PN)
 }
 \arguments{
 \item{PN}{A Petri Net}
@@ -12,3 +18,10 @@ flows(PN)
 \description{
 Extracts the flows from a Petri Net
 }
+\section{Methods (by class)}{
+\itemize{
+\item \code{flows(petrinet)}: Flow of petrinet
+
+\item \code{flows(marked_petrinet)}: Flow of marked petrinet
+
+}}

@@ -2,9 +2,15 @@
 % Please edit documentation in R/places.R
 \name{places}
 \alias{places}
+\alias{places.petrinet}
+\alias{places.marked_petrinet}
 \title{Places}
 \usage{
 places(PN)
+
+\method{places}{petrinet}(PN)
+
+\method{places}{marked_petrinet}(PN)
 }
 \arguments{
 \item{PN}{A Petri Net}
@@ -12,3 +18,10 @@ places(PN)
 \description{
 Extracts the places from a Petri Net
 }
+\section{Methods (by class)}{
+\itemize{
+\item \code{places(petrinet)}: Places of petrinet
+
+\item \code{places(marked_petrinet)}: Places of marked petrinet
+
+}}

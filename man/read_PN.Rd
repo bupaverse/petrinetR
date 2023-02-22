@@ -4,10 +4,12 @@
 \alias{read_PN}
 \title{Read PNML}
 \usage{
-read_PN(file)
+read_PN(file, add_final_marking = TRUE)
 }
 \arguments{
 \item{file}{Path to .pnml file}
+
+\item{add_final_marking}{[TRUE] add final marking}
 }
 \description{
 Function

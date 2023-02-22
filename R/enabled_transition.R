@@ -12,6 +12,11 @@
 
 
 enabled_transition <- function(PN,transition) {
+
+	lifecycle::deprecate_warn(
+		when = "0.3.0",
+		what = "enabledenabled_transition()")
+
 	if(transition %>% is_transition(PN))
 		return(all(pre_set(PN, transition) %in% PN$marking))
 	else
