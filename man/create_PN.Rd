@@ -7,20 +7,20 @@
 create_PN(places, transitions, flows)
 }
 \arguments{
-\item{places}{A vector of unique places.}
+\item{places}{A data.frame of unique places, with columns id and label.}
 
-\item{transitions}{A data.frame of unique transitions, with columns named "id" and "label"}
+\item{transitions}{A data.frame of unique transitions, with columns id and label.}
 
-\item{flows}{A data.frame of flows, with columns named "from" and "to".}
+\item{flows}{A data.frame of flows, with columns named "from" and "to", refering to ids of places and transitions.}
 }
 \description{
 Function to create a petri net by specificing a set of places, transitions, flows and a marking.
 }
 \examples{
 
-create_PN("place_1",
-			"transition_1",
-			data.frame(from = "place_1",to = "transition_1"),
-			marking = "place_1")
+create_PN(tibble(id = "p1", label = "place_1"),
+			tibble(id = "t1", label = "transition_1"),
+			tibble(from = "t1",to = "p1"),
+			initial_marking = "p1")
 
 }

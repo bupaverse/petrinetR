@@ -6,7 +6,7 @@
 #' @param node A node
 #' @param PN A Petri Net
 #'
-#' @export is_nodes
+#' @export is_node
 
 is_node <- function(node, PN) {
 	UseMethod("is_node")
