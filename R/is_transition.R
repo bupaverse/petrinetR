@@ -9,10 +9,8 @@
 
 is_transition <- function(transition, PN) {
 	UseMethod("is_transition")
-}
 
-is_transition.petrinet <- function(transition, PN) {
-	if(transition %in% transitions(PN)$id)
+	if(transition %in% transitions(PN)$label | transition %in% transitions(PN)$id)
 		return(T)
 	else
 		return(F)

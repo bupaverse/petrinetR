@@ -13,7 +13,7 @@ is_place <- function(place, PN) {
 }
 
 is_place.petrinet <- function(place, PN) {
-	if(place %in% places(PN)$id)
+	if(place %in% places(PN)$id | place %in% places(PN)$label)
 		return(T)
 	else
 		return(F)
