@@ -5,17 +5,13 @@
 #' @description Function
 #'
 #' @param file Path to .pnml file
-<<<<<<< HEAD
 #' @param add_final_marking [TRUE] add final marking
-=======
-	#' @param initialize_marking Set marking of PN to initial marking
-	>>>>>>> fd3bd1e4c167bd5d7a85679b54dc1de19993651a
+
 #' @import xml2
 #' @import purrr
 #' @export
 #'
 #'
-<<<<<<< HEAD
 read_PN <- function(file, add_final_marking = TRUE) {
 
 	node <- NULL
