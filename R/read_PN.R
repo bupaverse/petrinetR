@@ -21,10 +21,10 @@ read_PN <- function(file, add_final_marking = TRUE) {
 	node_name <- NULL
 	name <- NULL
 
-	read_xml(file) %>%
-		xml_child("net") %>%
-		xml_child("page") %>%
-		xml_children() -> t
+		read_xml(file) %>%
+			xml_child("net") %>%
+			xml_child("page") %>%
+			xml_children() -> t
 
 
 	tibble(name = xml_name(t),
@@ -41,13 +41,13 @@ read_PN <- function(file, add_final_marking = TRUE) {
 		select(-initial_marking, -label) -> flows
 
 
-	data %>% filter(type == "place") %>% select(id, label, initial_marking) -> places
-	data %>% filter(type == "transition") %>% select(id, label) -> transitions
+	data %>% filter(name == "place") %>% select(id, label, initial_marking) -> places
+	data %>% filter(name == "transition") %>% select(id, label) -> transitions
 
 	nodes <- bind_rows(places, transitions) %>% select(id, label)
 
 
-	list(places = places, transitions = transitions)#, nodes = nodes, flows = flows)
+	#, nodes = nodes, flows = flows)
 
 	create_PN(places = places,
 			  transitions = transitions,
