@@ -17,7 +17,7 @@
 
 create_PN <- function(places,transitions,flows) {
 	PN <- list()
-	PN$places <- data.frame(id = places , stringsAsFactors = F)
+	PN$places <- places
 	PN$transitions <- transitions
 	PN$flows <- flows
 
