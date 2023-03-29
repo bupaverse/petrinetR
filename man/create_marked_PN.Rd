@@ -7,16 +7,15 @@
 create_marked_PN(PN, initial_marking, final_marking)
 }
 \arguments{
-\item{x}{a model (`list` object) returned by [pm4py_inductive()].}
+\item{PN}{\code{\link{petrinet}}: Object of class \code{\link{petrinet}}.}
+
+\item{initial_marking}{\code{\link{character}}: A vector with place ids representing the initial marking.}
+
+\item{final_marking}{\code{\link{character}}: A vector with place ids representing the final marking.}
+}
+\value{
+A \code{\link{marked_petrinet}}
 }
 \description{
-Function to create a petri net by specifying a set of places, transitions and flows.
-}
-\examples{
-
-create_PN("place_1",
-			"transition_1",
-			data.frame(from = "place_1",to = "transition_1"),
-			marking = "place_1")
-
+Function to create a  \code{\link{marked_petrinet}}, consisting of a \code{\link{petrinet}}, an initial marking, and a final marking.
 }

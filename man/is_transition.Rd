@@ -7,10 +7,13 @@
 is_transition(transition, PN)
 }
 \arguments{
-\item{transition}{A transition}
+\item{transition}{\code{\link{character}} of length one: the transition id to check.}
 
-\item{PN}{A Petri Net}
+\item{PN}{\code{\link{petrinet}} or \code{\link{marked_petrinet}}}
+}
+\value{
+logical that indicates whether \code{transition} is a transition in \code{PN}
 }
 \description{
-Check if a transition is part of a petri net
+Check if a transition is part of a petri net.
 }

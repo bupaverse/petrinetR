@@ -1,8 +1,10 @@
 #' @title Flows
 #'
-#' @description Extracts the flows from a Petri Net
+#' @description Extracts the flows from a (marked) Petri Net
 #'
-#' @param PN A Petri Net
+#' @param PN \code{\link{petrinet}} or \code{\link{marked_petrinet}}
+#'
+#' @return A data.frame containing the flows of the petri net.
 #'
 #' @export flows
 

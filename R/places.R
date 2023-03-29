@@ -1,9 +1,7 @@
-#' @title Places
-#'
-#'
+#' Places
 #' @description Extracts the places from a Petri Net
 #'
-#' @param PN A Petri Net
+#' @inheritParams flows
 #'
 #' @export places
 

@@ -7,8 +7,6 @@
 #'
 #' @export parsel_trace
 
-
-
 parsel_trace <- function(PN, trace) {
 
 	lifecycle::deprecate_warn(

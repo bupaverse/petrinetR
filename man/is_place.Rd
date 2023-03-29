@@ -7,10 +7,13 @@
 is_place(place, PN)
 }
 \arguments{
-\item{place}{A place}
+\item{place}{\code{\link{character}} of length one: the place id to check.}
 
-\item{PN}{A Petri Net}
+\item{PN}{\code{\link{petrinet}} or \code{\link{marked_petrinet}}}
+}
+\value{
+logical that indicates whether \code{place} is a place in \code{PN}
 }
 \description{
-Check if a place is part of a petri net
+Check if a place is part of a petri net.
 }

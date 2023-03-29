@@ -1,18 +1,15 @@
 
 #' @title Is place
 #'
-#' @description Check if a place is part of a petri net
+#' @description Check if a place is part of a petri net.
 #'
-#' @param place A place
-#' @param PN A Petri Net
-#'
+#' @param place \code{\link{character}} of length one: the place id to check.
+#' @inheritParams is_node
+#' @return logical that indicates whether \code{place} is a place in \code{PN}
 #' @export is_place
 
-is_place <- function(place, PN) {
-	UseMethod("is_place")
-}
 
-is_place.petrinet <- function(place, PN) {
+is_place <- function(place, PN) {
 	if(place %in% places(PN)$id | place %in% places(PN)$label)
 		return(T)
 	else

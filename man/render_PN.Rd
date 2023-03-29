@@ -7,8 +7,8 @@
 render_PN(PN)
 }
 \arguments{
-\item{PN}{A petri net}
+\item{PN}{\code{\link{petrinet}} or \code{\link{marked_petrinet}}}
 }
 \description{
-Function
+Visualize Petri Net with bipartite graph.
 }

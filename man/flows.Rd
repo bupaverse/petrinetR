@@ -13,10 +13,13 @@ flows(PN)
 \method{flows}{marked_petrinet}(PN)
 }
 \arguments{
-\item{PN}{A Petri Net}
+\item{PN}{\code{\link{petrinet}} or \code{\link{marked_petrinet}}}
+}
+\value{
+A data.frame containing the flows of the petri net.
 }
 \description{
-Extracts the flows from a Petri Net
+Extracts the flows from a (marked) Petri Net
 }
 \section{Methods (by class)}{
 \itemize{

@@ -1,18 +1,14 @@
 
 
-#' Title
+#' Get nodes from (marked) petrinet
 #'
-#' @param PN
-#'
-#' @return
+#' @inheritParams flows
 #' @export
 #'
-#' @examples
 
 nodes <- function(PN) {
 	UseMethod("nodes")
 }
-
 
 #' @export
 nodes.petrinet <- function(PN) {

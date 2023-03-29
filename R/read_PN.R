@@ -1,14 +1,13 @@
 
 
-#' @title Read PNML
-#'
-#' @description Function
-#'
+#' @title Read .PNML file
 #' @param file Path to .pnml file
-#' @param add_final_marking [TRUE] add final marking
+#' @param add_final_marking \code{\link{logical}} (default: \code{TRUE}): add final marking. If \code{TRUE}, all places without outgoing flows are considered part of a single final marking. Overwrite with set_final_marking() if needed. If \code{FALSE}, final_marking is set to \code{NULL}
 
 #' @import xml2
 #' @import purrr
+#' @return A code{\link{marked_petrinet}}
+#'
 #' @export
 #'
 #'
@@ -19,6 +18,7 @@ read_PN <- function(file, add_final_marking = TRUE) {
 	initial_marking <- NULL
 	final_marking <- NULL
 	node_name <- NULL
+	target <- NULL
 	name <- NULL
 
 		read_xml(file) %>%
