@@ -1,9 +1,7 @@
-#' @title Transitions
-#'
-#'
+#' Transitions
 #' @description Extracts the transitions from a Petri Net
 #'
-#' @param PN A Petri Net
+#' @inheritParams flows
 #'
 #' @export transitions
 

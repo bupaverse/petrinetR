@@ -1,8 +1,7 @@
 #' @title VisNetwork from PN
 #' @description Visualize a Petri Net with an interactive network
 #'
-#' @param PN Petri Net to visualize
-#'
+#' @inheritParams flows
 #' @export visNetwork_from_PN
 
 

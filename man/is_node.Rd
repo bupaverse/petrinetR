@@ -7,9 +7,12 @@
 is_node(node, PN)
 }
 \arguments{
-\item{node}{A node}
+\item{node}{\code{\link{character}} of length one: the node id to check.}
 
-\item{PN}{A Petri Net}
+\item{PN}{\code{\link{petrinet}} or \code{\link{marked_petrinet}}}
+}
+\value{
+logical that indicates whether \code{node} is a node in \code{PN}
 }
 \description{
 Check if a node is part of a petri net

@@ -7,20 +7,22 @@
 create_PN(places, transitions, flows)
 }
 \arguments{
-\item{places}{A data.frame of unique places, with columns id and label.}
+\item{places}{\code{data.frame} or \code{tibble} of places, with columns id and label. Both columns should be characters.}
 
-\item{transitions}{A data.frame of unique transitions, with columns id and label.}
+\item{transitions}{\code{data.frame} or \code{tibble} of transitions, with columns id and label. Both columns should be characters.}
 
-\item{flows}{A data.frame of flows, with columns named "from" and "to", refering to ids of places and transitions.}
+\item{flows}{\code{data.frame} or \code{tibble} of flows, with columns named "from" and "to", referring to ids of places and transitions. Both columns should be characters.}
+}
+\value{
+A \code{\link{petrinet}}
 }
 \description{
-Function to create a petri net by specificing a set of places, transitions, flows and a marking.
+Function to create a \code{\link{petrinet}} by specifying places, transitions and flows.
 }
 \examples{
-
+library(dplyr)
 create_PN(tibble(id = "p1", label = "place_1"),
 			tibble(id = "t1", label = "transition_1"),
-			tibble(from = "t1",to = "p1"),
-			initial_marking = "p1")
+			tibble(from = "t1",to = "p1"))
 
 }

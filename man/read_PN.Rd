@@ -2,15 +2,18 @@
 % Please edit documentation in R/read_PN.R
 \name{read_PN}
 \alias{read_PN}
-\title{Read PNML}
+\title{Read .PNML file}
 \usage{
 read_PN(file, add_final_marking = TRUE)
 }
 \arguments{
 \item{file}{Path to .pnml file}
 
-\item{add_final_marking}{[TRUE] add final marking}
+\item{add_final_marking}{\code{\link{logical}} (default: \code{TRUE}): add final marking. If \code{TRUE}, all places without outgoing flows are considered part of a single final marking. Overwrite with set_final_marking() if needed. If \code{FALSE}, final_marking is set to \code{NULL}}
+}
+\value{
+A code{\link{marked_petrinet}}
 }
 \description{
-Function
+Read .PNML file
 }

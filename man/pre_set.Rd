@@ -7,9 +7,9 @@
 pre_set(PN, node)
 }
 \arguments{
-\item{PN}{A Petri Net}
+\item{PN}{\code{\link{petrinet}} or \code{\link{marked_petrinet}}}
 
-\item{node}{A place or transition in the petri net}
+\item{node}{\code{\link{character}} of length one: the node id for which to get the postset.}
 }
 \description{
 Get the preset of a transition or place in a Petri Net

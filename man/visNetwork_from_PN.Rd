@@ -7,7 +7,7 @@
 visNetwork_from_PN(PN)
 }
 \arguments{
-\item{PN}{Petri Net to visualize}
+\item{PN}{\code{\link{petrinet}} or \code{\link{marked_petrinet}}}
 }
 \description{
 Visualize a Petri Net with an interactive network

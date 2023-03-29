@@ -13,7 +13,7 @@ transitions(PN)
 \method{transitions}{marked_petrinet}(PN)
 }
 \arguments{
-\item{PN}{A Petri Net}
+\item{PN}{\code{\link{petrinet}} or \code{\link{marked_petrinet}}}
 }
 \description{
 Extracts the transitions from a Petri Net

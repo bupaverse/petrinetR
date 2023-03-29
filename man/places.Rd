@@ -13,7 +13,7 @@ places(PN)
 \method{places}{marked_petrinet}(PN)
 }
 \arguments{
-\item{PN}{A Petri Net}
+\item{PN}{\code{\link{petrinet}} or \code{\link{marked_petrinet}}}
 }
 \description{
 Extracts the places from a Petri Net

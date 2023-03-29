@@ -4,9 +4,7 @@
 #' @description Several auxilliary functions for Petri Net objects.
 #' @rdname Utils
 #' @param PN A petri net
-#' @param .t A character vector of transitions
-#' @param .p A character vector of places
-#' @param .flows A data.frame with a to and from column
+#' @inheritParams create_PN
 #' @param .f A function name to apply for renaming
 #' @param ... Additional arguments
 #' @export
@@ -33,7 +31,6 @@ n_flows <- function(PN) {
 n_nodes <- function(PN) {
 	n_places(PN) + n_transitions(PN)
 }
-#' @rdname Utils
 
 #' @rdname Utils
 #' @export
@@ -91,28 +88,28 @@ rename_places <- function(PN, .f, ...) {
 }
 #' @rdname Utils
 #' @export
-add_places <- function(PN, .p) {
+add_places <- function(PN, places) {
 	PN %>%
 		places() %>%
-		bind_rows(data_frame(id = .p)) -> new_places
+		bind_rows(places) -> new_places
 	PN$places <- new_places
 	return(PN)
 }
 #' @rdname Utils
 #' @export
-add_transitions <- function(PN, .t) {
+add_transitions <- function(PN, transitions) {
 	PN %>%
 		transitions() %>%
-		bind_rows(data_frame(id = .t)) -> new_transitions
+		bind_rows(transitions) -> new_transitions
 	PN$transitions <- new_transitions
 	return(PN)
 }
 #' @rdname Utils
 #' @export
-add_flows <- function(PN, .flows) {
+add_flows <- function(PN, flows) {
 	PN %>%
 		flows %>%
-		bind_rows(.flows) -> new_flows
+		bind_rows(flows) -> new_flows
 	PN$flows <- new_flows
 	return(PN)
 }

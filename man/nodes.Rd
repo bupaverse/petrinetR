@@ -2,13 +2,13 @@
 % Please edit documentation in R/nodes.R
 \name{nodes}
 \alias{nodes}
-\title{Title}
+\title{Get nodes from (marked) petrinet}
 \usage{
 nodes(PN)
 }
 \arguments{
-\item{PN}{}
+\item{PN}{\code{\link{petrinet}} or \code{\link{marked_petrinet}}}
 }
 \description{
-Title
+Get nodes from (marked) petrinet
 }

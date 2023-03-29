@@ -1,6 +1,4 @@
 
-#' @export
-#'
 label <- function(net, transition) {
 
 	net %>%
