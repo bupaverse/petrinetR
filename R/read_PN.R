@@ -21,11 +21,16 @@ read_PN <- function(file, add_final_marking = TRUE) {
 	target <- NULL
 	name <- NULL
 
-		read_xml(file) %>%
-			xml_child("net") %>%
-			xml_child("page") %>%
-			xml_children() -> t
+	read_xml(file) %>%
+		xml_child("net") -> t
 
+
+	# some PNML files have not `page` node
+	if (xml_length(xml_child(t, "page")) > 0) {
+		xml_child(t, "page") -> t
+	}
+
+	xml_children(t) -> t
 
 	tibble(name = xml_name(t),
 		   id = xml_attr(t, "id"),
